@@ -68,7 +68,7 @@ namespace ECS
 				}
 			
 				// bookkeping of entityComponentPairs:
-				// Element at 'to' has correct arraIndex but wrong EntityId.
+				// Element at 'to' has correct arraIndex but wrong EnsätityId.
 				// Replace with EntityId corresp. to moved component.  
 				this->entityComponentPairs[to].id = this->entityComponentPairs[from].id;
 
@@ -108,7 +108,7 @@ namespace ECS
 			size_t arrayIndex;
 		};
 
-		std::vector<ECPair> b;
+		std::vector<ECPair> entityComponentPairs;
 		std::unordered_map<EntityId, size_t> entityToIndexMap;
 		size_t sizeOfEntries;
 	};
